@@ -1,0 +1,36 @@
+package br.financas.fatec.model;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "tb_pessoa_fisica")
+public class PessoaJuridica extends Cliente{
+
+	private static final long serialVersionUID = 1L;
+	@Column(name = "cd_cnpj", length = 14)
+	private String cnpj;
+	@Column(name = "nm_ramo_atividade", length = 20)
+	private String ramoAtividade;
+	
+	public PessoaJuridica() {}
+
+	public String getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+
+	public String getRamoAtividade() {
+		return ramoAtividade;
+	}
+
+	public void setRamoAtividade(String ramoAtividade) {
+		this.ramoAtividade = ramoAtividade;
+	}
+	
+	
+
+
+}
